@@ -1,0 +1,98 @@
+h1 {
+    string-set: title content(text); 
+}
+
+@page {
+    size: 190mm 280mm;
+    bleed: 3mm;
+    marks: crop;
+    @bottom-center {
+        content: string(title); 
+    }
+}
+
+@page :right {
+    @bottom-right-corner {
+        content: counter(page); 
+    }
+}
+
+@page :left {
+    @bottom-left-corner {
+        content: counter(page); 
+    }
+}
+.vide {
+    color: brown;
+}
+
+
+
+
+section {
+    break-before:page;
+}
+
+h2 {
+    break-after: avoid;
+}
+
+/* couverture */
+
+.couv {
+    page: couverture;
+    font-size: 2em;
+    font-family: "EB Garamond";
+}
+
+@page couverture {
+    background: black;
+    margin: 50mm 0 0 30mm;
+}
+
+
+
+
+/* pour enlever les marges sur les premiers éléments des pages */
+[data-split-from] > :first-child {
+    margin-top: 0;
+}
+
+/* sommaire */
+nav a::after {
+    content: target-counter(attr(href), page );
+    float: right;
+}
+
+.toc-lvl1 {
+    margin-top: 2em;
+}
+
+.toc-chapitre {
+    margin-left: 2em;
+}
+
+
+
+
+
+.partie {
+    page: partie;
+    break-before: right;
+}
+
+
+
+@page partie {
+    background: brown;
+    color: white;
+    @bottom-left-corner {
+        content: none; 
+    }
+    @bottom-right-corner {
+        content: none; 
+    }
+    @bottom-center {
+        content: none; 
+    }
+}

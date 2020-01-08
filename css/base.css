@@ -1,0 +1,102 @@
+body {
+  line-height: 1;
+  
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+
+
+/* styles pour toutes les pages */
+
+body {
+  font-family: "EB Garamond";
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  text-indent: 3ch;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.intro {
+  font-style: italic;
+}
+
+.drapeau {
+    width: 200px;
+    height: 100px;
+}
+
+
+
+.footnotes {
+    font-family: sans-serif;
+    font-size: 0.8em;
+    column-span: all;
+    list-style-type: decimal;
+    border-top: 1px solid red;
+    padding-top: 1em;
+    padding-left: 146px;
+    
+}
+
+h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 1.2;
+}
+
+
+/* pleine page; */
+.fullpage {
+    break-before: page;
+    break-after: page;
+    margin-left: calc(var(--pagedjs-margin-left) * -1);
+    width: calc(var(--pagedjs-width) + (var(--pagedjs-bleed-left) + var(--pagedjs-bleed-right)) + var(--pagedjs-margin-left) + var(--pagedjs-margin-right));
+    height: calc(var(--pagedjs-height));
+    display: block;
+    position: absolute;
+    top: calc((var(--pagedjs-margin-top) + var(--pagedjs-bleed-top)) * -1);
+    left: calc((var(--pagedjs-margin-left) + var(--pagedjs-bleed-left)) * -1);
+    object-fit: cover;
+    z-index: 1;
+}
